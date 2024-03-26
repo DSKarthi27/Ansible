@@ -52,10 +52,19 @@ TASK 5:To create directory and delete directory with permissions
 --------------------------------------------------------------------------------------------------------
 TASK 6:To create file and delete file
   
-  To create file: $ ansible demo -b -m file -a "path=/home/ansible/demo.txt state=touch"
+        To create file: $ ansible demo -b -m file -a "path=/home/ansible/demo.txt state=touch"
  
-	To check file: $ ansible demo -b -m command -a "ls"
+        To check file: $ ansible demo -b -m command -a "ls"
    
 	To delete file: $ ansible demo -b -m file -a "path=/home/ansible/demo.txt state=touch state=absent"
  
-	To check file: $ansible demo -b -m command -a "ls"
+        To check file: $ansible demo -b -m command -a "ls"
+----------------------------------------------------------------------------------------------------------------
+Task 7:To copy the Files
+
+        To create file: $ ansible demo -b -m file -a "path=/home/ansible/demo.txt state=touch"
+
+        To check file: $ansible demo -b -m command -a "ls"
+	
+	To copy the file: $ ansible demo -b -m copy -a "src=/home/ansible/demo.txt dest=/home/ansible "
+   
